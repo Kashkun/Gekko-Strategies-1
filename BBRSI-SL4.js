@@ -127,7 +127,7 @@ method.check = function (candle) {
 
 }
 
-if (advised && buyPrice > candle.close * (1 + this.settings.stoploss.percentage * .001)){
+if (advised && buyPrice > candle.close * (.01 + this.settings.stoploss.percentage * .01)){
   log.debug('Date', candle.start); 
   log.debug("Stop loss triggered, sell at", candle.close);
   log.debug('RSI', rsiVal, 'RSI Long', rsiLongVal);
